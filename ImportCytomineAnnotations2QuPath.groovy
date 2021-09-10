@@ -1,3 +1,5 @@
+// Script by Carlos Fernandez Moro
+// Inspired by Egor Zindy's script https://forum.image.sc/t/exporting-ndpi-ndpa-annotation-files-from-qupath-code-attached/55418
 import qupath.lib.io.GsonTools
 import qupath.lib.geom.Point2
 import qupath.lib.roi.PolygonROI

@@ -1,3 +1,6 @@
+// Script by Egor Zindy
+// https://forum.image.sc/t/creating-project-from-command-line/45608/2
+
 import groovy.io.FileType
 import java.awt.image.BufferedImage
 import qupath.lib.images.servers.ImageServerProvider

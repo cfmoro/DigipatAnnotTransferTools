@@ -1,3 +1,4 @@
+// Script by Carlos Fernandez Moro
 import be.cytomine.client.Cytomine
 import be.cytomine.client.collections.AnnotationCollection
 import be.cytomine.client.collections.ImageInstanceCollection
