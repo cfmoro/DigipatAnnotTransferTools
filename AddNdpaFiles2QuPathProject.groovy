@@ -1,5 +1,6 @@
 // Script by Egor Zindy
 // https://forum.image.sc/t/creating-project-from-command-line/45608/2
+// TODO - does not work in v0.3
 
 import groovy.io.FileType
 import java.awt.image.BufferedImage
