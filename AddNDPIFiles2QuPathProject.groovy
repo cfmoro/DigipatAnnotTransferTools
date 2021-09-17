@@ -15,7 +15,7 @@ if (selectedDir == null)
     
 //Check if we already have a QuPath Project directory in there...
 projectName = "QuPathProject"
-File directory = new File(selectedDir.toString() + File.separator + projectName)
+File directory = new File(selectedDir.toString() + File.separator + projectName    )
 
 if (!directory.exists())
 {
@@ -69,3 +69,5 @@ for (file in files) {
 
 // Changes should now be reflected in the project directory
 project.syncChanges()
+
+println "*** Done"
