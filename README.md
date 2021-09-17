@@ -84,6 +84,7 @@ B) Workflow Cytomine > QuPath > NDPA
       - In QuPath, open script: QuPath-NDPA-annotations.groovy
       - Set variable: summary1OrImport2OrExport3 = 3
       - Run script.
+      - Beware, eventual previous NDPA files will be overwritten. Always keep backup of annotations ;)
 
 C) Recommended folder structure:
   
