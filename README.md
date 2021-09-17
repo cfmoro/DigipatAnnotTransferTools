@@ -50,7 +50,7 @@ A) Workflow NDPA > QuPath > Cytomine
   5. Import CytomJSON annotations to Cytomine server:
       - In IDE (e.g. Eclipse) or text editor, open script: Cytomine-CytomJSON-annotations.groovy
       - Configure in properties file 'config/CytomineConn.properties' externalized Cytomine connection credentials (host, publicKey, privateKey) and project name (projectName) (e.g. projectName=My-Digipat-Project).
-      - Add to classpath: cytomine-java-client.jar (https://doc.cytomine.org/dev-guide/clients/java/installation).
+      - Add to classpath: cytomine-java-client.jar (https://doc.cytomine.org/dev-guide/clients/java/installation), com.google.gson.jar (e.g. v2.8.6).
       - Script will download through grape dependency org.codehaus.groovy:groovy-json.
       - Set variable: import1OrExport2 = 1
       - Run script.
@@ -66,6 +66,7 @@ B) Workflow Cytomine > QuPath > NDPA
   3. Export Cytomine annotations in CytomJSON format:
       - In IDE (e.g. Eclipse) or text editor, open script: Cytomine-CytomJSON-annotations.groovy
       - Configure in properties file 'config/CytomineConn.properties' externalized Cytomine connection credentials (host, publicKey, privateKey) and project name (projectName) (e.g. projectName=My-Digipat-Project).
+      - Add to classpath: cytomine-java-client.jar (https://doc.cytomine.org/dev-guide/clients/java/installation), com.google.gson.jar (e.g. v2.8.6).
       - Set variable: import1OrExport2 = 2
       - Optionally, set targetImages (e.g. ["Img-1.ndpi", "Img-2.ndpi"]) whose annotations to be exported. If left empty ([]), annotations from all images in the project will be exported.
       - Run script.
