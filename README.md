@@ -97,5 +97,3 @@ C) Recommended folder structure:
   &nbsp;&nbsp;&nbsp;jars/  
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cytomine-java-client.jar  
   &nbsp;&nbsp;&nbsp;out/
-
-__test
