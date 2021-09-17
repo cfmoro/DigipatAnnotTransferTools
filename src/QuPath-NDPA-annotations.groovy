@@ -25,15 +25,6 @@ def summary1OrImport2OrExport3 = 3
 def useLabelMapping = true
 
 // Map of Ndpa labels to QuPath classes and names
-/*def labelMapping = [
-    t: "Tumor",
-    M: "Mucin",
-    T: "Tumor",
-    s: "Serum",
-    L: "Lymphocytes", 
-    B: "Blood",
-    pp: "Macrophages"
-]*/
 def labelMapping = [
     t: "test_Tumor",
     M: "Celltypes-IPMN",

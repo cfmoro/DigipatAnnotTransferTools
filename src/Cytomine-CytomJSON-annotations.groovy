@@ -8,10 +8,9 @@ import be.cytomine.client.models.ImageInstance
 import be.cytomine.client.models.Ontology
 import be.cytomine.client.models.Project
 import be.cytomine.client.models.Term
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 
-@Grab("org.codehaus.groovy:groovy-json")
-import groovy.json.JsonBuilder
-import groovy.json.JsonSlurper
 
 // Configurable variables for script functionality
 // Set desired script function (mutually exclusive)
@@ -68,9 +67,14 @@ def connectCytomine() {
 
 def importAnnots2Cytomine(myProject, cytoImages, cytoOntology, cytoTerms) {
 	def projectName = myProject.getStr("name")
+			
+	// Read annotations from JSON file
+	Gson gson = new Gson()   
+	// Path to Json annotations
+	File jsonFile = new File('out/' + projectName + '-QuPathAnnotations' +  '.json')
+	Reader reader =  jsonFile.newReader()
 	
-	File jsonFile = new File('out/' + projectName + '-QuPathAnnotations' +  '.json')	
-	def json = new JsonSlurper().parse(jsonFile)
+	def json = gson.fromJson(reader, List.class)	
 	
 	for(anImageAnnots in json) {
 		def imageName = anImageAnnots['filename']
@@ -232,10 +236,12 @@ def exportAnnots2JSON(myProject, images, ontology, terms, targetImages) {
 	}
 	
 	// Json representation of image and annotation data
-	def jsonOut = new JsonBuilder(imagesAnnotsList).toPrettyString()
+	//def jsonOut = new JsonBuilder(imagesAnnotsList).toPrettyString()
+	// Json representation of image and annotation data
+	Gson gson = new GsonBuilder().setPrettyPrinting().create()
+	def jsonOut = gson.toJson(imagesAnnotsList)
 	//println "JSON output:"
-	//println jsonOut
-	
+	//println jsonOut	
 	// Write Json to file
 	def myFile = new File('out/' + myProject.getStr("name") + '-CytomineAnnotations.json')
 	myFile.write(jsonOut)

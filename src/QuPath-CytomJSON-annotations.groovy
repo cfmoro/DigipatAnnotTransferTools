@@ -17,7 +17,7 @@ import org.locationtech.jts.io.WKTWriter
 // Configurable variables for script functionality
 // Set desired script function (mutually exclusive)
 def importToQuPath1OrExportFromQuPath2 = 1
-def jsonDir = "/home/bibu/eclipse-workspace/Ndpa2Cytomine/out/" // ended with /
+def jsonDir = "/home/bibu/eclipse-workspace/DigipatAnnotTransferTools/out/" // ended with /
 def projectName = "KI-gastrointestinal"
 
 /**
